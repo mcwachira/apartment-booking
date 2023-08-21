@@ -17,7 +17,6 @@ interface InputProps {
   register: UseFormRegister<FieldValues>,
   errors: FieldErrors
 }
-
 const Input = ({
   id,
   label,
