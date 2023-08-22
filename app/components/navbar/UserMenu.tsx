@@ -10,10 +10,11 @@ import useLoginModal from '@/app/hooks/useLoginModal';
 import { signOut } from 'next-auth/react';
 import { User } from '@prisma/client';
 import { useRouter } from 'next/navigation';
+import { SafeUser } from '@/app/types';
 
 
 interface UserMenuProps{
-    currentUser?:User | null
+    currentUser?:SafeUser | null
 }
 
 const UserMenu = ({currentUser}:UserMenuProps) => {
@@ -22,6 +23,9 @@ const UserMenu = ({currentUser}:UserMenuProps) => {
     const registerModal = useRegisterModal()
     const loginModal = useLoginModal()
     const router = useRouter()
+
+
+    console.log(currentUser)
 
     const toggleOpen = useCallback(() => {
         setIsOpen((value) => !value);
@@ -58,9 +62,9 @@ const UserMenu = ({currentUser}:UserMenuProps) => {
         >
           <AiOutlineMenu />
                   
-                    <div className="hidden md:block">
-                        <Avatar src=""/>
-                    </div>
+          <div className="hidden md:block">
+            <Avatar src={currentUser?.image} />
+          </div>
                 </div>
             </div>
 
