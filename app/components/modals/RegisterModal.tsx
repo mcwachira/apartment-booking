@@ -12,11 +12,13 @@ import Input from '../inputs/Inputs'
 import toast from 'react-hot-toast'
 import Button from '../Button'
 import { signIn } from 'next-auth/react';
+import useLoginModal from '@/app/hooks/useLoginModal';
+
 
 const RegisterModal = () => {
 
     const registerModal = useRegisterModal()
-
+    const loginModal = useLoginModal()
     const[isLoading, setIsLoading]= useState(false)
     const {register, handleSubmit, formState:{
         errors
@@ -41,6 +43,12 @@ const RegisterModal = () => {
         })
 
     }
+
+
+    const onToggle = useCallback(() => {
+      loginModal.onOpen()
+      registerModal.onClose();
+    }, [loginModal, registerModal])
 
 
     const bodyContent = (
@@ -103,7 +111,7 @@ const RegisterModal = () => {
           >
             <p>Already have an account?
               <span 
-                // onClick={onToggle} 
+                onClick={onToggle} 
                 className="
                   text-neutral-800
                   cursor-pointer 

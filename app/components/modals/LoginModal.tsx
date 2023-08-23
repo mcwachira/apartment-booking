@@ -57,6 +57,10 @@ const LoginModal = () => {
 
 
 
+    const onToggle = useCallback(() => {
+      loginModal.onClose();
+      registerModal.onOpen();
+    }, [loginModal, registerModal])
 
     const bodyContent = (
       <div className="flex flex-col gap-4">
@@ -109,15 +113,15 @@ const LoginModal = () => {
               font-light
             "
           >
-            <p>Already have an account?
+            <p>First Time Using Apartment-Booking?
               <span 
-                // onClick={onToggle} 
+                 onClick={onToggle} 
                 className="
                   text-neutral-800
                   cursor-pointer 
                   hover:underline
                 "
-                > Log in</span>
+                > Create an account</span>
             </p>
           </div>
         </div>
