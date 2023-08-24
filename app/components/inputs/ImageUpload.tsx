@@ -9,8 +9,7 @@ declare global {
   var cloudinary: any
 }
 
-//ebnables any user to upload a phototoyour cloudinary account
-const uploadPreset = "nbanu0qs";
+const uploadPreset = "pgc9ehd5";
 
 interface ImageUploadProps {
   onChange: (value: string) => void;

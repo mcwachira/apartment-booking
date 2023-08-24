@@ -5,7 +5,7 @@ import Image from "next/image";
 import Modal from './Modal';
 import useRentModal from '@/app/hooks/useRentModal';
 import Heading from '../Heading';
-import Input from '../inputs/Inputs';
+import Input from '../inputs/Input';
 import { categories } from '../navbar/Categories';
 import CategoryInput from '../inputs/CategoryInput';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';

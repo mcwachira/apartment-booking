@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 
 import React, {useCallback, useEffect, useState} from 'react'
 import {IoMdClose} from "react-icons/io";
@@ -35,7 +35,7 @@ const Modal = ({
     useEffect(() => {
         setShowModal(isOpen);
     }, [isOpen]);
-
+  
     const handleClose = useCallback(() => {
         if (disabled) {
             return;

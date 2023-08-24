@@ -21,6 +21,8 @@ interface ListingCardProps{
 }
 
 const ListingCard = ({data , reservation, onAction, disabled, actionLabel, currentUser , actionId=""}:ListingCardProps) => {
+    
+    // console.log(data.id)
 
     const router = useRouter()
 

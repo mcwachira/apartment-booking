@@ -15,6 +15,7 @@ interface IParams {
 const ListingPage = async ({ params }: { params: IParams }) => {
 
   const listing = await getListingById(params);
+  console.log(listing)
   //const reservations = await getReservations(params);
   const currentUser = await getCurrentUser();
 

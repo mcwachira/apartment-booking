@@ -9,7 +9,7 @@ import useLoginModal from '@/app/hooks/useLoginModal'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 import Modal from './Modal'
 import Heading from '../Heading'
-import Input from '../inputs/Inputs'
+import Input from '../inputs/Input'
 import Button from '../Button'
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import { useRouter } from "next/navigation";
